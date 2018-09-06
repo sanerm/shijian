@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style>
+		.box{
+			width: 200px;
+			height: 100px;
+			border: 1px solid red;
+			margin: 200px auto;
+			
+			line-height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		span{
+			display: block;
+			width: 40px;
+			float: left;
+			text-align: center;
+		}
+	</style>
+<body>
+	<div class="box">
+		<span class="h">18</span>时
+		<span class="m">55</span>分
+		<span class="s">46</span>秒
+	</div>
+</body>
+	<script>
+		let h=document.querySelector(".h");
+		let m=document.querySelector(".m");
+		let s=document.querySelector(".s");
+		function run(){
+			let now = new Date();
+			let hdate=now.getHours();
+			let mdate=now.getMinutes();
+			let sdate=now.getSeconds();
+			h.innerText=hdate;
+			m.innerText=mdate;
+			s.innerText=sdate;
+			console.log(now.getMinutes());
+		}
+	
+		setInterval(run,1000);
+
+
+	</script>
+</html>
